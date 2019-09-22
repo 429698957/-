@@ -162,4 +162,11 @@ public class EnterpriseService {
 
 	}
 
+	/**
+	 * 查询所有热门企业
+	 * @return 条件Ishot 0：非热门 1：热门
+	 */
+	public List<Enterprise> hotlist() {
+		return enterpriseDao.findByIshot("1");
+	}
 }

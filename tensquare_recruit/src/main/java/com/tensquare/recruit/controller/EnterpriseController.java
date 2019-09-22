@@ -104,5 +104,14 @@ public class EnterpriseController {
 		enterpriseService.deleteById(id);
 		return new Result(true,StatusCode.OK,"删除成功");
 	}
-	
+	/**
+	 * 热门企业
+	 */
+	@RequestMapping(value="/search/hotlist",method= RequestMethod.GET)
+	public Result hotlist(){
+		List<Enterprise> enterpriseList = enterpriseService.hotlist();
+		return new Result(true,StatusCode.OK,"查询热门企业成功",enterpriseList);
+	    //Todo 视频看到了第二天第8个
+
+	}
 }
