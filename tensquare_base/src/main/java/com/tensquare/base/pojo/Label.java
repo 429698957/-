@@ -17,7 +17,7 @@ public class Label {
         private Long count;//使用数量
         private Long fans;//关注数
         private String recommend;//是否推荐
-        private Integer abc;
+
 
         public String getId() {
             return id;
